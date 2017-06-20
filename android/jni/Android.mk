@@ -18,12 +18,11 @@ LOCAL_SRC_FILES :=	../../tolua.c \
 					../../uint64.c \
 					../../lua_extensions/lpeg.c \
 					../../lua_extensions/struct.c \
-					../../lua_extensions/bit.c \
 					../../lua_extensions/cjson/strbuf.c \
-					../../lua_extensions/cjson/lua_cjson.c \
+					../../lua_extensions/cjson/lua_cjson_jit.c \
 					../../lua_extensions/cjson/fpconv.c \
 					../../lua_extensions/lfs/lfs.c \
-					../../lua_extensions/lua_extensions.c \
+					../../lua_extensions/lua_extensions_jit.c \
  					
 LOCAL_WHOLE_STATIC_LIBRARIES += libluajit
 include $(BUILD_SHARED_LIBRARY)

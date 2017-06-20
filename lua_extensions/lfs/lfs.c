@@ -77,7 +77,7 @@
 
 #endif
 
-#if LUA_VERSION_NUM < 502
+#if !defined(luaL_newlib) && LUA_VERSION_NUM < 502
 #  define luaL_newlib(L,l) (lua_newtable(L), luaL_register(L,NULL,l))
 #endif
 
