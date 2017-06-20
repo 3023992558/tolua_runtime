@@ -30,3 +30,11 @@
 
 # Debug files
 *.dSYM/
+iOS/Build
+*.DS_Store
+
+macnojit/build
+
+*.so
+iOS/tolua.xcodeproj/*
+*.a

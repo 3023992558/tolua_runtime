@@ -34,6 +34,8 @@ gcc -m32 -O3 -std=gnu99 -shared \
 	luasocket/timeout.c \
 	luasocket/udp.c \
 	luasocket/wsocket.c \
+	lua_extensions/lfs/lfs.c \
+	lua_extensions/lua_extensions.c \
 	-o Plugins/x86/tolua.dll \
 	-I./ \
 	-Iluajit-2.1/src \

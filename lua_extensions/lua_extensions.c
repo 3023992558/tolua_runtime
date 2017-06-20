@@ -1,13 +1,14 @@
 #include "lua_extensions.h"
+#include "cjson/lua_cjson.h"
 #include "lfs/lfs.h"
-#include "cjson/lua_cjson.c"
-#include "struct.c"
-#include "lpeg.c"
-#include "bit.c"
+#include "struct.h"
+#include "lpeg.h"
+#include "bit.h"
+
 
 static luaL_Reg lua_exts[] = {
     {"lfs", luaopen_lfs},
-    { "pack", luaopen_struct},
+    { "struct", luaopen_struct},
     { "cjson", luaopen_cjson_safe},
     { "lpeg", luaopen_lpeg},
     { "bit", luaopen_bit},

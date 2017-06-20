@@ -40,12 +40,9 @@
 #include <string.h>
 #include <math.h>
 #include <limits.h>
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
-
 #include "strbuf.h"
 #include "fpconv.h"
+#include "lua_cjson.h"
 
 #ifndef CJSON_MODNAME
 #define CJSON_MODNAME   "cjson"
@@ -1291,13 +1288,13 @@ static int json_decode(lua_State *l)
 
 /* ===== INITIALISATION ===== */
 
-//#if !defined(LUA_VERSION_NUM) || LUA_VERSION_NUM < 502
-#if 0
+#if !defined(LUA_VERSION_NUM) || LUA_VERSION_NUM < 502
+//#if 0
 /* Compatibility for Lua 5.1.
  *
  * luaL_setfuncs() is used to create a module table where the functions have
  * json_config_t as their first upvalue. Code borrowed from Lua 5.2 source. */
-static void luaL_setfuncs (lua_State *l, const luaL_Reg *reg, int nup)
+LUALIB_API void luaL_setfuncs (lua_State *l, const luaL_Reg *reg, int nup)
 {
     int i;
 

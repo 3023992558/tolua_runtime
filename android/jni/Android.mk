@@ -16,25 +16,14 @@ LOCAL_CFLAGS :=  -O2 -std=gnu99
 LOCAL_SRC_FILES :=	../../tolua.c \
 					../../int64.c \
 					../../uint64.c \
-					../../pb.c \
-					../../lpeg.c \
-					../../struct.c \
-					../../cjson/strbuf.c \
-					../../cjson/lua_cjson.c \
-					../../cjson/fpconv.c \
-					../../luasocket/auxiliar.c \
- 					../../luasocket/buffer.c \
- 					../../luasocket/except.c \
- 					../../luasocket/inet.c \
- 					../../luasocket/io.c \
- 					../../luasocket/luasocket.c \
- 					../../luasocket/mime.c \
- 					../../luasocket/options.c \
- 					../../luasocket/select.c \
- 					../../luasocket/tcp.c \
- 					../../luasocket/timeout.c \
- 					../../luasocket/udp.c \
- 					../../luasocket/usocket.c \
+					../../lua_extensions/lpeg.c \
+					../../lua_extensions/struct.c \
+					../../lua_extensions/bit.c \
+					../../lua_extensions/cjson/strbuf.c \
+					../../lua_extensions/cjson/lua_cjson.c \
+					../../lua_extensions/cjson/fpconv.c \
+					../../lua_extensions/lfs/lfs.c \
+					../../lua_extensions/lua_extensions.c \
  					
 LOCAL_WHOLE_STATIC_LIBRARIES += libluajit
 include $(BUILD_SHARED_LIBRARY)

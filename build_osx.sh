@@ -3,4 +3,5 @@
 cd macnojit/
 xcodebuild clean
 xcodebuild -configuration=Release
-cp -r build/Release/tolua.bundle ../Plugins/
+rm -rf ../Plugins/tolua.bundle
+cp -rf build/Release/tolua.bundle ../Plugins/
