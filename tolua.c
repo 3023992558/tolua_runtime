@@ -902,10 +902,10 @@ static int static_index_event(lua_State *L)
         return 1;
     }
     
-    if (toluaflags & FLAG_INDEX_ERROR)
-    {
-        luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));    
-    }
+//    if (toluaflags & FLAG_INDEX_ERROR)
+//    {
+//        luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));    
+//    }
 
     return 1;
 }
