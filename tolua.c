@@ -906,7 +906,7 @@ static int static_index_event(lua_State *L)
 //    {
 //        luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));    
 //    }
-
+    lua_pushnil(L);
     return 1;
 }
 
