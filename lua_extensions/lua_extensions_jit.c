@@ -3,6 +3,8 @@
 #include "lfs/lfs.h"
 #include "struct.h"
 #include "lpeg.h"
+#include "lua_zlib/lua_zlib.h"
+#include "lpack/lpack.h"
 
 
 static luaL_Reg lua_exts[] = {
@@ -10,6 +12,8 @@ static luaL_Reg lua_exts[] = {
     { "struct", luaopen_struct},
     { "cjson", luaopen_cjson_safe},
     { "lpeg", luaopen_lpeg},
+    { "zlib", luaopen_zlib},
+    { "pack", luaopen_pack},
     {NULL, NULL}
 };
 

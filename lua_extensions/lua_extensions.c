@@ -4,7 +4,8 @@
 #include "struct.h"
 #include "lpeg.h"
 #include "bit.h"
-
+#include "lua_zlib/lua_zlib.h"
+#include "lpack/lpack.h"
 
 static luaL_Reg lua_exts[] = {
     {"lfs", luaopen_lfs},
@@ -12,6 +13,8 @@ static luaL_Reg lua_exts[] = {
     { "cjson", luaopen_cjson_safe},
     { "lpeg", luaopen_lpeg},
     { "bit", luaopen_bit},
+    { "zlib", luaopen_zlib},
+    { "pack", luaopen_pack},
     {NULL, NULL}
 };
 

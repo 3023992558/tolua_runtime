@@ -33,8 +33,10 @@
 iOS/Build
 *.DS_Store
 
+#  自定一部分
 macnojit/build
-
 *.so
 iOS/tolua.xcodeproj/*
 *.a
+*.xcbkptlist
+*.xcuserstate

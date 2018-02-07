@@ -13,6 +13,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../
 
 LOCAL_CPPFLAGS := -O2
 LOCAL_CFLAGS :=  -O2 -std=gnu99
+LOCAL_LDLIBS := -lm -lz
 LOCAL_SRC_FILES :=	../../tolua.c \
 					../../int64.c \
 					../../uint64.c \
@@ -21,8 +22,11 @@ LOCAL_SRC_FILES :=	../../tolua.c \
 					../../lua_extensions/cjson/strbuf.c \
 					../../lua_extensions/cjson/lua_cjson_jit.c \
 					../../lua_extensions/cjson/fpconv.c \
+					../../lua_extensions/lpack/lpack.c \
+ 					../../lua_extensions/lua_zlib/lua_zlib.c \
 					../../lua_extensions/lfs/lfs.c \
 					../../lua_extensions/lua_extensions_jit.c \
  					
 LOCAL_WHOLE_STATIC_LIBRARIES += libluajit
+
 include $(BUILD_SHARED_LIBRARY)
