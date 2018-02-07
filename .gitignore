@@ -40,6 +40,8 @@ iOS/tolua.xcodeproj/project.xcworkspace
 iOS/tolua.xcodeproj/xcuserdata
 macnojit/tolua.xcodeproj/project.xcworkspace
 macnojit/tolua.xcodeproj/xcuserdata
+macjit/tolua.xcodeproj/project.xcworkspace
+macjit/tolua.xcodeproj/xcuserdata
 *.a
 *.xcbkptlist
 *.xcuserstate
