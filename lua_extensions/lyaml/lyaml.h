@@ -26,7 +26,7 @@
 #ifndef LYAML_H
 #define LYAML_H 1
 
-#include <yaml.h>
+#include "../yaml/yaml.h"
 
 #include <lua.h>
 #include <lauxlib.h>

@@ -6,6 +6,7 @@
 #include "bit.h"
 #include "lua_zlib/lua_zlib.h"
 #include "lpack/lpack.h"
+#include "lyaml/lyaml.h"
 
 static luaL_Reg lua_exts[] = {
     {"lfs", luaopen_lfs},
@@ -15,6 +16,8 @@ static luaL_Reg lua_exts[] = {
     { "bit", luaopen_bit},
     { "zlib", luaopen_zlib},
     { "pack", luaopen_pack},
+    { "pack", luaopen_pack},
+    { "yaml", luaopen_yaml},
     {NULL, NULL}
 };
 
