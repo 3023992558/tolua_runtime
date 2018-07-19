@@ -22,7 +22,6 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	lua_extensions/cjson/fpconv.c \
 	lua_extensions/lfs/lfs.c \
 	lua_extensions/lpack/lpack.c \
- 	lua_extensions/lua_zlib/lua_zlib.c \
 	lua_extensions/lua_extensions_jit.c \
 	-lz -lm \
 	-o Plugins/x86/tolua.dll \
