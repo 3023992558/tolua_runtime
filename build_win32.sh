@@ -22,10 +22,6 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	lua_extensions/cjson/fpconv.c \
 	lua_extensions/lfs/lfs.c \
 	lua_extensions/lpack/lpack.c \
-<<<<<<< HEAD
-=======
- 	lua_extensions/lua_zlib/lua_zlib.c \
->>>>>>> f2dc84d6e90f9434931847256f523433f66e71f4
 	lua_extensions/yaml/api.c \
 	lua_extensions/yaml/dumper.c \
 	lua_extensions/yaml/emitter.c \
