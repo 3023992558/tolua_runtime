@@ -16,7 +16,6 @@ static luaL_Reg lua_exts[] = {
     { "bit", luaopen_bit},
     { "zlib", luaopen_zlib},
     { "pack", luaopen_pack},
-    { "pack", luaopen_pack},
     { "yaml", luaopen_yaml},
     {NULL, NULL}
 };

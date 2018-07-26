@@ -5,6 +5,7 @@
 #include "lpeg.h"
 #include "lua_zlib/lua_zlib.h"
 #include "lpack/lpack.h"
+#include "lyaml/lyaml.h"
 
 
 static luaL_Reg lua_exts[] = {
@@ -13,6 +14,7 @@ static luaL_Reg lua_exts[] = {
     { "cjson", luaopen_cjson_safe},
     { "lpeg", luaopen_lpeg},
     { "pack", luaopen_pack},
+    { "yaml", luaopen_yaml},
     {NULL, NULL}
 };
 
