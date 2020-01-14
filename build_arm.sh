@@ -36,7 +36,7 @@ echo "select : $luapath"
 cd $DIR/$luapath/src
 
 # Android/ARM, armeabi-v7a (ARMv7 VFP), Android 4.0+ (ICS)
-NDK=D:/android-ndk-r16b
+NDK=/Workspace/Android/android-ndk-r16b
 NDKABI=21
 NDKVER=$NDK/toolchains/arm-linux-androideabi-4.9
 NDKP=$NDKVER/prebuilt/windows-x86_64/bin/arm-linux-androideabi-
@@ -47,10 +47,10 @@ NDKARCH="-march=armv7-a -mfloat-abi=softfp -Wl,--fix-cortex-a8"
 
 case $luapath in 
     $luacdir)
-        $NDK/ndk-build.cmd clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
-        $NDK/ndk-build.cmd APP_ABI="armeabi-v7a" APP_PLATFORM=android-$NDKABI
+        $NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
+        $NDK/ndk-build APP_ABI="armeabi-v7a" APP_PLATFORM=android-$NDKABI
         cp obj/local/armeabi-v7a/$lualibname.a ../../android53/jni/
-        $NDK/ndk-build.cmd clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
+        $NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
     ;;
     $luajitdir)
         make clean        
@@ -61,7 +61,7 @@ case $luapath in
 esac
 
 cd ../../$lualinkpath
-$NDK/ndk-build.cmd clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
-$NDK/ndk-build.cmd APP_ABI="armeabi-v7a" APP_PLATFORM=android-$NDKABI
+$NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
+$NDK/ndk-build APP_ABI="armeabi-v7a" APP_PLATFORM=android-$NDKABI
 cp libs/armeabi-v7a/libtolua.so ../$outpath/Android/libs/armeabi-v7a
-$NDK/ndk-build.cmd clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI
+$NDK/ndk-build clean APP_ABI="armeabi-v7a,x86,arm64-v8a" APP_PLATFORM=android-$NDKABI

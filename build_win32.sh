@@ -5,7 +5,7 @@ luacdir="lua53"
 luajitdir="luajit-2.1"
 luapath=""
 lualibname=""
-outpath="Plugins"
+outpath="Plugins53"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 while :
@@ -65,26 +65,28 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	cjson/strbuf.c \
 	cjson/lua_cjson.c \
 	cjson/fpconv.c \
-	luasocket/auxiliar.c \
-	luasocket/buffer.c \
-	luasocket/except.c \
-	luasocket/inet.c \
-	luasocket/io.c \
-	luasocket/luasocket.c \
-	luasocket/mime.c \
-	luasocket/options.c \
-	luasocket/select.c \
-	luasocket/tcp.c \
-	luasocket/timeout.c \
-	luasocket/udp.c \
-	luasocket/wsocket.c \
-	luasocket/compat.c \
+	lfs/lfs.c \
+	yaml/api.c \
+	yaml/dumper.c \
+	yaml/emitter.c \
+	yaml/loader.c \
+	yaml/parser.c \
+	yaml/reader.c \
+	yaml/scanner.c \
+	yaml/writer.c \
+	lyaml/emitter.c \
+	lyaml/parser.c \
+	lyaml/scanner.c \
+	lyaml/yaml.c \
 	-o $outpath/x86/tolua.dll \
 	-I./ \
  	-I$luapath/src \
 	-Icjson \
-	-Iluasocket \
 	-Ilpeg \
+	-Ilfs \
+	-Iyaml \
+	-Ilyaml \
+	-Ilpack \
 	-lws2_32 \
  	-Wl,--whole-archive window/x86/$lualibname.a -Wl,--no-whole-archive -static-libgcc -static-libstdc++
 

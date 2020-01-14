@@ -42,6 +42,7 @@ SOFTWARE.
 #include <sys/time.h>
 #endif
 
+#define FLAG_INDEX_ERROR     0
 int toluaflags = FLAG_INDEX_ERROR;
 static int tag = 0;  
 static int gettag = 0;
@@ -570,19 +571,20 @@ static int class_index_event(lua_State *L)
 
             lua_settop(L, 3);
         }
-
-        lua_settop(L, 2);
-        int *udata = (int*)lua_touserdata(L, 1);
-
-        if (*udata == LUA_NULL_USERDATA)
-        {
-            return luaL_error(L, "attemp to index %s on a nil value", lua_tostring(L, 2));   
-        }
         
-        if (toluaflags & FLAG_INDEX_ERROR)
-        {
-            return luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));
-        }        
+// 没有返回nil
+//        lua_settop(L, 2);
+//        int *udata = (int*)lua_touserdata(L, 1);
+//
+//        if (*udata == LUA_NULL_USERDATA)
+//        {
+//            return luaL_error(L, "attemp to index %s on a nil value", lua_tostring(L, 2));
+//        }
+//
+//        if (toluaflags & FLAG_INDEX_ERROR)
+//        {
+//            return luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));
+//        }
     }
     else if(t == LUA_TTABLE)
     {
@@ -632,10 +634,10 @@ static int class_index_event(lua_State *L)
             return 1;
         }          
         
-        if (toluaflags & FLAG_INDEX_ERROR)
-        {
-            return luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));               
-        }      
+//        if (toluaflags & FLAG_INDEX_ERROR)
+//        {
+//            return luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));               
+//        }      
     }
 
     lua_pushnil(L);
@@ -906,11 +908,11 @@ static int static_index_event(lua_State *L)
         return 1;
     }
     
-    if (toluaflags & FLAG_INDEX_ERROR)
-    {
-        luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));    
-    }
-
+//    if (toluaflags & FLAG_INDEX_ERROR)
+//    {
+//        luaL_error(L, "field or property %s does not exist", lua_tostring(L, 2));
+//    }
+    lua_pushnil(L);
     return 1;
 }
 

@@ -32,10 +32,6 @@
 		842A59AA1C85B76100EA2815 /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = 842A59A51C85B76100EA2815 /* lua_cjson.c */; };
 		842A59AB1C85B76100EA2815 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 842A59A61C85B76100EA2815 /* strbuf.c */; };
 		8445EB131D4C9D2100397F5E /* uint64.c in Sources */ = {isa = PBXBuildFile; fileRef = 8445EB121D4C9D2100397F5E /* uint64.c */; };
-		84568EB52100A11900D0B0C4 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 84568EB02100A11900D0B0C4 /* emitter.c */; };
-		84568EB62100A11900D0B0C4 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = 84568EB22100A11900D0B0C4 /* scanner.c */; };
-		84568EB72100A11900D0B0C4 /* yaml.c in Sources */ = {isa = PBXBuildFile; fileRef = 84568EB32100A11900D0B0C4 /* yaml.c */; };
-		84568EB82100A11900D0B0C4 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 84568EB42100A11900D0B0C4 /* parser.c */; };
 		849CC46B1C9846C800D4D510 /* int64.c in Sources */ = {isa = PBXBuildFile; fileRef = 849CC46A1C9846C800D4D510 /* int64.c */; };
 		84DA06D222B23C1B00493874 /* unixdgram.c in Sources */ = {isa = PBXBuildFile; fileRef = 84DA06D022B23C1A00493874 /* unixdgram.c */; };
 		84DA06D322B23C1B00493874 /* unixstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 84DA06D122B23C1B00493874 /* unixstream.c */; };
@@ -69,6 +65,7 @@
 		84EF23A81C4CCD3F0093A49A /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EF23851C4CCD3F0093A49A /* lundump.c */; };
 		84EF23A91C4CCD3F0093A49A /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EF23871C4CCD3F0093A49A /* lvm.c */; };
 		84EF23AA1C4CCD3F0093A49A /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EF23891C4CCD3F0093A49A /* lzio.c */; };
+		84F8B8B11C45677A00AE9B8F /* pb.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B8B01C45677A00AE9B8F /* pb.c */; };
 		84F8B8B31C45678E00AE9B8F /* tolua.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B8B21C45678E00AE9B8F /* tolua.c */; };
 		84F8B8B51C45679700AE9B8F /* struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B8B41C45679700AE9B8F /* struct.c */; };
 /* End PBXBuildFile section */
@@ -128,11 +125,6 @@
 		842A59A61C85B76100EA2815 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strbuf.c; sourceTree = "<group>"; };
 		842A59A71C85B76100EA2815 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strbuf.h; sourceTree = "<group>"; };
 		8445EB121D4C9D2100397F5E /* uint64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uint64.c; path = ../../uint64.c; sourceTree = "<group>"; };
-		84568EB02100A11900D0B0C4 /* emitter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = emitter.c; sourceTree = "<group>"; };
-		84568EB12100A11900D0B0C4 /* lyaml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lyaml.h; sourceTree = "<group>"; };
-		84568EB22100A11900D0B0C4 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
-		84568EB32100A11900D0B0C4 /* yaml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yaml.c; sourceTree = "<group>"; };
-		84568EB42100A11900D0B0C4 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
 		849CC46A1C9846C800D4D510 /* int64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = int64.c; path = ../../int64.c; sourceTree = "<group>"; };
 		84DA06CE22B23C1A00493874 /* unixstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unixstream.h; sourceTree = "<group>"; };
 		84DA06CF22B23C1A00493874 /* unixdgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unixdgram.h; sourceTree = "<group>"; };
@@ -191,6 +183,7 @@
 		84EF23881C4CCD3F0093A49A /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lvm.h; sourceTree = "<group>"; };
 		84EF23891C4CCD3F0093A49A /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
 		84EF238A1C4CCD3F0093A49A /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
+		84F8B8B01C45677A00AE9B8F /* pb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pb.c; path = ../../pb.c; sourceTree = "<group>"; };
 		84F8B8B21C45678E00AE9B8F /* tolua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tolua.c; path = ../../tolua.c; sourceTree = "<group>"; };
 		84F8B8B41C45679700AE9B8F /* struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = struct.c; path = ../../struct.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,94 +266,14 @@
 		842A59A21C85B76100EA2815 /* cjson */ = {
 			isa = PBXGroup;
 			children = (
-				8410B73D2100A630003C87F0 /* yaml */,
-				84568EAF2100A0F800D0B0C4 /* lyaml */,
-				841711B6202AA9E90000E407 /* lpack */,
-				841711B3202AA9E90000E407 /* lua_zlib */,
-				8409BEFC1EF8C2B800882196 /* cjson */,
-				8409BF031EF8C2B800882196 /* lfs */,
-				8409BF061EF8C2B800882196 /* lpeg.c */,
-				8409BF521EF8C49800882196 /* bit.h */,
-				8409BEFB1EF8C2B800882196 /* bit.c */,
-				8409BF071EF8C2B800882196 /* lpeg.h */,
-				8409BF081EF8C2B800882196 /* lua_extensions.c */,
-				8409BF091EF8C2B800882196 /* lua_extensions.h */,
-				8409BF311EF8C2B800882196 /* struct.c */,
-				8409BF531EF8C52100882196 /* struct.h */,
+				842A59A31C85B76100EA2815 /* fpconv.c */,
+				842A59A41C85B76100EA2815 /* fpconv.h */,
+				842A59A51C85B76100EA2815 /* lua_cjson.c */,
+				842A59A61C85B76100EA2815 /* strbuf.c */,
+				842A59A71C85B76100EA2815 /* strbuf.h */,
 			);
-			name = lua_extensions;
-			path = ../../lua_extensions;
-			sourceTree = "<group>";
-		};
-		8409BEFC1EF8C2B800882196 /* cjson */ = {
-			isa = PBXGroup;
-			children = (
-				8409BF511EF8C3B200882196 /* lua_cjson.h */,
-				8409BEFD1EF8C2B800882196 /* fpconv.c */,
-				8409BEFE1EF8C2B800882196 /* fpconv.h */,
-				8409BEFF1EF8C2B800882196 /* lua_cjson.c */,
-				8409BF001EF8C2B800882196 /* strbuf.c */,
-				8409BF011EF8C2B800882196 /* strbuf.h */,
-				8409BF021EF8C2B800882196 /* WHAT */,
-			);
-			path = cjson;
-			sourceTree = "<group>";
-		};
-		8409BF031EF8C2B800882196 /* lfs */ = {
-			isa = PBXGroup;
-			children = (
-				8409BF041EF8C2B800882196 /* lfs.c */,
-				8409BF051EF8C2B800882196 /* lfs.h */,
-			);
-			path = lfs;
-			sourceTree = "<group>";
-		};
-		8410B73D2100A630003C87F0 /* yaml */ = {
-			isa = PBXGroup;
-			children = (
-				8410B7502100A80E003C87F0 /* config.h */,
-				8410B7442100A666003C87F0 /* api.c */,
-				8410B73E2100A666003C87F0 /* dumper.c */,
-				8410B7432100A666003C87F0 /* emitter.c */,
-				8410B7402100A666003C87F0 /* loader.c */,
-				8410B7422100A666003C87F0 /* parser.c */,
-				8410B7452100A666003C87F0 /* reader.c */,
-				8410B73F2100A666003C87F0 /* scanner.c */,
-				8410B7462100A666003C87F0 /* writer.c */,
-				8410B7412100A666003C87F0 /* yaml_private.h */,
-				8410B7472100A666003C87F0 /* yaml.h */,
-			);
-			path = yaml;
-			sourceTree = "<group>";
-		};
-		841711B3202AA9E90000E407 /* lua_zlib */ = {
-			isa = PBXGroup;
-			children = (
-				841711B4202AA9E90000E407 /* lua_zlib.c */,
-				841711B5202AA9E90000E407 /* lua_zlib.h */,
-			);
-			path = lua_zlib;
-			sourceTree = "<group>";
-		};
-		841711B6202AA9E90000E407 /* lpack */ = {
-			isa = PBXGroup;
-			children = (
-				841711B7202AA9E90000E407 /* lpack.h */,
-				841711B8202AA9E90000E407 /* lpack.c */,
-			);
-			path = lpack;
-			sourceTree = "<group>";
-		};
-		84568EAF2100A0F800D0B0C4 /* lyaml */ = {
-			isa = PBXGroup;
-			children = (
-				84568EB02100A11900D0B0C4 /* emitter.c */,
-				84568EB12100A11900D0B0C4 /* lyaml.h */,
-				84568EB42100A11900D0B0C4 /* parser.c */,
-				84568EB22100A11900D0B0C4 /* scanner.c */,
-				84568EB32100A11900D0B0C4 /* yaml.c */,
-			);
-			path = lyaml;
+			name = cjson;
+			path = ../../cjson;
 			sourceTree = "<group>";
 		};
 		84EF23541C4CCD3F0093A49A /* lua */ = {
@@ -518,7 +431,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8409BF361EF8C2B800882196 /* WHAT in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,12 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8409BF321EF8C2B800882196 /* bit.c in Sources */,
-				8409BF331EF8C2B800882196 /* fpconv.c in Sources */,
 				84EF23A81C4CCD3F0093A49A /* lundump.c in Sources */,
-				841711BA202AA9E90000E407 /* lpack.c in Sources */,
-				8410B7492100A666003C87F0 /* scanner.c in Sources */,
+				84F8B8B51C45679700AE9B8F /* struct.c in Sources */,
+				842A59A91C85B76100EA2815 /* fpconv.c in Sources */,
+				8400928F1CCF406200F89A56 /* udp.c in Sources */,
+				84ED5C081C4D0749006965FF /* bit.c in Sources */,
 				84EF23991C4CCD3F0093A49A /* lmathlib.c in Sources */,
+				840092871CCF406200F89A56 /* io.c in Sources */,
+				8400928C1CCF406200F89A56 /* serial.c in Sources */,
+				840092861CCF406200F89A56 /* inet.c in Sources */,
 				84EF23981C4CCD3F0093A49A /* llex.c in Sources */,
 				840092901CCF406200F89A56 /* unix.c in Sources */,
 				84DA06D322B23C1B00493874 /* unixstream.c in Sources */,
@@ -547,19 +462,23 @@
 				8419C9D823266E3800283BB0 /* lpprint.c in Sources */,
 				840092851CCF406200F89A56 /* except.c in Sources */,
 				84EF23AA1C4CCD3F0093A49A /* lzio.c in Sources */,
+				8400928D1CCF406200F89A56 /* tcp.c in Sources */,
+				84F8B8B11C45677A00AE9B8F /* pb.c in Sources */,
+				840092821CCF406200F89A56 /* auxiliar.c in Sources */,
 				84EF23931C4CCD3F0093A49A /* ldump.c in Sources */,
 				8419C9D423266E3800283BB0 /* lpcap.c in Sources */,
 				84EF239B1C4CCD3F0093A49A /* loadlib.c in Sources */,
+				840092911CCF406200F89A56 /* usocket.c in Sources */,
 				84EF23951C4CCD3F0093A49A /* lgc.c in Sources */,
-				8410B74A2100A666003C87F0 /* loader.c in Sources */,
+				842A59AA1C85B76100EA2815 /* lua_cjson.c in Sources */,
 				84EF23A51C4CCD3F0093A49A /* ltm.c in Sources */,
 				84EF239D1C4CCD3F0093A49A /* lopcodes.c in Sources */,
 				84F8B8B31C45678E00AE9B8F /* tolua.c in Sources */,
 				84EF239C1C4CCD3F0093A49A /* lobject.c in Sources */,
-				8410B7482100A666003C87F0 /* dumper.c in Sources */,
+				840092881CCF406200F89A56 /* luasocket.c in Sources */,
 				84EF23A11C4CCD3F0093A49A /* lstring.c in Sources */,
+				842A59AB1C85B76100EA2815 /* strbuf.c in Sources */,
 				84EF23A31C4CCD3F0093A49A /* ltable.c in Sources */,
-				8409BF381EF8C2B800882196 /* lpeg.c in Sources */,
 				84EF23A41C4CCD3F0093A49A /* ltablib.c in Sources */,
 				8445EB131D4C9D2100397F5E /* uint64.c in Sources */,
 				84EF239F1C4CCD3F0093A49A /* lparser.c in Sources */,
@@ -567,10 +486,9 @@
 				840092891CCF406200F89A56 /* mime.c in Sources */,
 				84EF23A91C4CCD3F0093A49A /* lvm.c in Sources */,
 				84EF23911C4CCD3F0093A49A /* ldebug.c in Sources */,
-				8410B74C2100A666003C87F0 /* emitter.c in Sources */,
 				84EF23921C4CCD3F0093A49A /* ldo.c in Sources */,
 				84EF23A01C4CCD3F0093A49A /* lstate.c in Sources */,
-				8409BF371EF8C2B800882196 /* lfs.c in Sources */,
+				8400928B1CCF406200F89A56 /* select.c in Sources */,
 				84EF239A1C4CCD3F0093A49A /* lmem.c in Sources */,
 				84EF23901C4CCD3F0093A49A /* ldblib.c in Sources */,
 				84EF23941C4CCD3F0093A49A /* lfunc.c in Sources */,
@@ -578,21 +496,12 @@
 				840092841CCF406200F89A56 /* compat.c in Sources */,
 				84EF23971C4CCD3F0093A49A /* liolib.c in Sources */,
 				84EF238F1C4CCD3F0093A49A /* lcode.c in Sources */,
-				8410B74E2100A666003C87F0 /* reader.c in Sources */,
-				8410B74F2100A666003C87F0 /* writer.c in Sources */,
-				8410B74B2100A666003C87F0 /* parser.c in Sources */,
 				84EF239E1C4CCD3F0093A49A /* loslib.c in Sources */,
-				84568EB72100A11900D0B0C4 /* yaml.c in Sources */,
 				84EF238E1C4CCD3F0093A49A /* lbaselib.c in Sources */,
-				84568EB62100A11900D0B0C4 /* scanner.c in Sources */,
-				8409BF391EF8C2B800882196 /* lua_extensions.c in Sources */,
-				8409BF4D1EF8C2B800882196 /* struct.c in Sources */,
 				84EF238C1C4CCD3F0093A49A /* lapi.c in Sources */,
 				84EF23961C4CCD3F0093A49A /* linit.c in Sources */,
-				8410B74D2100A666003C87F0 /* api.c in Sources */,
-				84568EB52100A11900D0B0C4 /* emitter.c in Sources */,
+				8400928E1CCF406200F89A56 /* timeout.c in Sources */,
 				84EF238D1C4CCD3F0093A49A /* lauxlib.c in Sources */,
-				8409BF351EF8C2B800882196 /* strbuf.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,11 +604,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-lz",
-					"-lm",
-				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = tolua;
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = bundle;
@@ -723,11 +628,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-lz",
-					"-lm",
-				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = tolua;
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = bundle;

@@ -476,7 +476,6 @@ TValue *lj_tab_newkey(lua_State *L, GCtab *t, cTValue *key)
     lua_assert(freenode != &G(L)->nilnode);
     collide = hashkey(t, &n->key);
     if (collide != n) {  /* Colliding node not the main node? */
-      Node *nn;
       while (noderef(collide->next) != n)  /* Find predecessor. */
 	collide = nextnode(collide);
       setmref(collide->next, freenode);  /* Relink chain. */
@@ -519,43 +518,6 @@ TValue *lj_tab_newkey(lua_State *L, GCtab *t, cTValue *key)
 	  break;
 	} else {
 	  freenode = nn;
-	}
-      } else {
-	/* Statement 3 is true, so need to consider all types of key. */
-	while ((nn = nextnode(freenode))) {
-	  if (!tvisnil(&nn->val) && hashkey(t, &nn->key) == n) {
-	  rechain:
-	    freenode->next = nn->next;
-	    nn->next = n->next;
-	    setmref(n->next, nn);
-	    /*
-	    ** Rechaining one node onto n creates a new dilemma: we now need
-	    ** to rechain any nn which has main(nn) == n OR has main(nn) equal
-	    ** to any node which has already been rechained. Furthermore, at
-	    ** least one of n and n->next will have a string key, so all types
-	    ** of nn key need to be considered. Rather than testing whether
-	    ** main(nn) definitely _is_ in the new chain, we test whether it
-	    ** might _not_ be in the old chain, and if so re-link it into
-	    ** the correct chain.
-	    */
-	    while ((nn = nextnode(freenode))) {
-	      if (!tvisnil(&nn->val)) {
-		Node *mn = hashkey(t, &nn->key);
-		if (mn != freenode && mn != nn) {
-		  freenode->next = nn->next;
-		  nn->next = mn->next;
-		  setmref(mn->next, nn);
-		} else {
-		  freenode = nn;
-		}
-	      } else {
-		freenode = nn;
-	      }
-	    }
-	    break;
-	  } else {
-	    freenode = nn;
-	  }
 	}
       }
     } else {  /* Otherwise use free node. */

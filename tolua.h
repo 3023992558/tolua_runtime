@@ -1,4 +1,4 @@
-﻿#ifndef tolua_h
+#ifndef tolua_h
 #define tolua_h
 #include "lua.h"
 
@@ -39,7 +39,7 @@
 
 #define LUA_NULL_USERDATA 	1
 #define TOLUA_NOPEER    	LUA_REGISTRYINDEX 		
-#define FLAG_INDEX_ERROR 	1
+#define FLAG_INDEX_ERROR 	0
 #define FLAG_INT64       	2
 
 #define MAX_ITEM 512

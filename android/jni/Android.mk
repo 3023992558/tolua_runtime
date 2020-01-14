@@ -13,7 +13,6 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../
 
 LOCAL_CPPFLAGS := -O2
 LOCAL_CFLAGS :=  -O2 -std=gnu99
-LOCAL_LDLIBS := -lm -lz
 LOCAL_SRC_FILES :=	../../tolua.c \
 					../../int64.c \
 					../../uint64.c \

@@ -5,7 +5,7 @@ luacdir="lua53"
 luajitdir="luajit-2.1"
 luapath=""
 lualibname=""
-outpath="Plugins"
+outpath="Plugins53"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 while :

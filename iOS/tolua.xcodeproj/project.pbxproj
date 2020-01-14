@@ -161,29 +161,20 @@
 			path = tolua;
 			sourceTree = "<group>";
 		};
-		8409BE371EF8C0B800882196 /* lua_extensions */ = {
+		840092B31CCF455100F89A56 /* cjson */ = {
 			isa = PBXGroup;
 			children = (
-				842916E221CA16C4009387FD /* lyaml */,
-				842916D621CA16C4009387FD /* yaml */,
-				841711AE202AA7D60000E407 /* lpack */,
-				841711AB202AA7D60000E407 /* lua_zlib */,
-				8409BF541EF8C58400882196 /* struct.h */,
-				8409BF551EF8C58400882196 /* bit.h */,
-				8409BE391EF8C0B800882196 /* cjson */,
-				8409BE401EF8C0B800882196 /* lfs */,
-				8409BE431EF8C0B800882196 /* lpeg.c */,
-				8409BE381EF8C0B800882196 /* bit.c */,
-				8409BE441EF8C0B800882196 /* lpeg.h */,
-				8409BE451EF8C0B800882196 /* lua_extensions.c */,
-				8409BE461EF8C0B800882196 /* lua_extensions.h */,
-				8409BE6E1EF8C0B800882196 /* struct.c */,
+				840092B41CCF455100F89A56 /* fpconv.c */,
+				840092B51CCF455100F89A56 /* fpconv.h */,
+				840092B61CCF455100F89A56 /* lua_cjson.c */,
+				840092B71CCF455100F89A56 /* strbuf.c */,
+				840092B81CCF455100F89A56 /* strbuf.h */,
 			);
-			name = lua_extensions;
-			path = ../../lua_extensions;
+			name = cjson;
+			path = ../../cjson;
 			sourceTree = "<group>";
 		};
-		8409BE391EF8C0B800882196 /* cjson */ = {
+		840092BD1CCF45A800F89A56 /* luasocket */ = {
 			isa = PBXGroup;
 			children = (
 				847FD89D22B37C3B00A92ACA /* compat.c */,
@@ -220,64 +211,8 @@
 				840092DD1CCF45A800F89A56 /* usocket.c */,
 				840092DE1CCF45A800F89A56 /* usocket.h */,
 			);
-			path = cjson;
-			sourceTree = "<group>";
-		};
-		8409BE401EF8C0B800882196 /* lfs */ = {
-			isa = PBXGroup;
-			children = (
-				8409BE411EF8C0B800882196 /* lfs.c */,
-				8409BE421EF8C0B800882196 /* lfs.h */,
-			);
-			path = lfs;
-			sourceTree = "<group>";
-		};
-		841711AB202AA7D60000E407 /* lua_zlib */ = {
-			isa = PBXGroup;
-			children = (
-				841711AC202AA7D60000E407 /* lua_zlib.c */,
-				841711AD202AA7D60000E407 /* lua_zlib.h */,
-			);
-			path = lua_zlib;
-			sourceTree = "<group>";
-		};
-		841711AE202AA7D60000E407 /* lpack */ = {
-			isa = PBXGroup;
-			children = (
-				841711AF202AA7D60000E407 /* lpack.h */,
-				841711B0202AA7D60000E407 /* lpack.c */,
-			);
-			path = lpack;
-			sourceTree = "<group>";
-		};
-		842916D621CA16C4009387FD /* yaml */ = {
-			isa = PBXGroup;
-			children = (
-				842916D721CA16C4009387FD /* loader.c */,
-				842916D821CA16C4009387FD /* scanner.c */,
-				842916D921CA16C4009387FD /* yaml_private.h */,
-				842916DA21CA16C4009387FD /* api.c */,
-				842916DB21CA16C4009387FD /* writer.c */,
-				842916DC21CA16C4009387FD /* config.h */,
-				842916DD21CA16C4009387FD /* dumper.c */,
-				842916DE21CA16C4009387FD /* reader.c */,
-				842916DF21CA16C4009387FD /* yaml.h */,
-				842916E021CA16C4009387FD /* emitter.c */,
-				842916E121CA16C4009387FD /* parser.c */,
-			);
-			path = yaml;
-			sourceTree = "<group>";
-		};
-		842916E221CA16C4009387FD /* lyaml */ = {
-			isa = PBXGroup;
-			children = (
-				842916E321CA16C4009387FD /* scanner.c */,
-				842916E421CA16C4009387FD /* yaml.c */,
-				842916E521CA16C4009387FD /* emitter.c */,
-				842916E621CA16C4009387FD /* lyaml.h */,
-				842916E721CA16C4009387FD /* parser.c */,
-			);
-			path = lyaml;
+			name = luasocket;
+			path = ../../luasocket;
 			sourceTree = "<group>";
 		};
 		8419C9FF232670BC00283BB0 /* lpeg */ = {
@@ -469,7 +404,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

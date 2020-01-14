@@ -46,3 +46,4 @@ macjit/tolua.xcodeproj/xcuserdata
 *.xcbkptlist
 *.xcuserstate
 *.meta
+build
