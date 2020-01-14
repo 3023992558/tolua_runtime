@@ -1,5 +1,6 @@
 ﻿#ifndef tolua_h
 #define tolua_h
+#include "lua.h"
 
 #if !defined(LUA_RIDX_MAINTHREAD)
 #define LUA_RIDX_MAINTHREAD	1
@@ -54,4 +55,12 @@ int  tolua_newuint64(lua_State* L);
 
 extern int toluaflags;
 
+#if LUA_VERSION_NUM == 503
+#define lua_getfenv	lua_getuservalue
+#define lua_setfenv	lua_setuservalue
+#define lua_objlen	lua_rawlen
+#define lua_getref(L, ref) lua_rawgeti(L, LUA_REGISTRYINDEX, ref)
+
+int luaL_typerror(lua_State *L, int narg, const char *tname);
+#endif
 #endif
