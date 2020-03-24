@@ -6,6 +6,7 @@
 #include "lua_zlib/lua_zlib.h"
 #include "lpack/lpack.h"
 #include "lyaml/lyaml.h"
+#include "pb/pb.h"
 
 static luaL_Reg lua_exts[] = {
     {"lfs", luaopen_lfs},
@@ -15,6 +16,7 @@ static luaL_Reg lua_exts[] = {
     { "pack", luaopen_pack},
     { "zlib", luaopen_zlib},
     { "yaml", luaopen_yaml},
+    { "pb", luaopen_pb},
     {NULL, NULL}
 };
 

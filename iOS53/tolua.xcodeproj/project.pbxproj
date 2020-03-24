@@ -62,6 +62,7 @@
 		849B10B323CC41EF00DC1928 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 849B10A323CC41EF00DC1928 /* emitter.c */; };
 		849B10B423CC41F000DC1928 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 849B10A423CC41EF00DC1928 /* parser.c */; };
 		849B10B523CC41F000DC1928 /* lfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 849B10A623CC41EF00DC1928 /* lfs.c */; };
+		849E6D162428D045005E8568 /* pb.c in Sources */ = {isa = PBXBuildFile; fileRef = 849E6D142428D045005E8568 /* pb.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -178,6 +179,8 @@
 		849B10A423CC41EF00DC1928 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
 		849B10A623CC41EF00DC1928 /* lfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfs.c; sourceTree = "<group>"; };
 		849B10A723CC41EF00DC1928 /* lfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfs.h; sourceTree = "<group>"; };
+		849E6D142428D045005E8568 /* pb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pb.c; sourceTree = "<group>"; };
+		849E6D152428D045005E8568 /* pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,7 @@
 		8400929D1CCF43D600F89A56 /* tolua */ = {
 			isa = PBXGroup;
 			children = (
+				849E6D132428D045005E8568 /* pb */,
 				84047C7E23CC8C790086EEF9 /* bit.h */,
 				84047C7F23CC8C790086EEF9 /* lpack */,
 				84047C7523CC8C780086EEF9 /* lua_extensions.c */,
@@ -404,6 +408,16 @@
 			path = ../../lfs;
 			sourceTree = "<group>";
 		};
+		849E6D132428D045005E8568 /* pb */ = {
+			isa = PBXGroup;
+			children = (
+				849E6D142428D045005E8568 /* pb.c */,
+				849E6D152428D045005E8568 /* pb.h */,
+			);
+			name = pb;
+			path = ../../pb;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,6 +491,7 @@
 				849B10B423CC41F000DC1928 /* parser.c in Sources */,
 				840092EE1CCF45A800F89A56 /* udp.c in Sources */,
 				849B10AE23CC41EF00DC1928 /* scanner.c in Sources */,
+				849E6D162428D045005E8568 /* pb.c in Sources */,
 				84047C9523CC8C790086EEF9 /* scanner.c in Sources */,
 				840092E41CCF45A800F89A56 /* except.c in Sources */,
 				840092BB1CCF455100F89A56 /* lua_cjson.c in Sources */,
