@@ -39,7 +39,7 @@ cd $DIR/$luapath/src
 NDK=/Workspace/Android/android-ndk-r16b
 NDKABI=21
 NDKVER=$NDK/toolchains/arm-linux-androideabi-4.9
-NDKP=$NDKVER/prebuilt/windows-x86_64/bin/arm-linux-androideabi-
+NDKP=$NDKVER/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-
 NDKF="-isystem $NDK/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=$NDKABI -D_FILE_OFFSET_BITS=32"
 NDK_SYSROOT_BUILD=$NDK/sysroot
 NDK_SYSROOT_LINK=$NDK/platforms/android-$NDKABI/arch-arm

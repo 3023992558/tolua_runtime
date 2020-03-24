@@ -7,6 +7,8 @@
 #include "lpack/lpack.h"
 #include "lyaml/lyaml.h"
 #include "pb/pb.h"
+#include "bit.h"
+#include "struct.h"
 
 static luaL_Reg lua_exts[] = {
     {"lfs", luaopen_lfs},
@@ -17,6 +19,8 @@ static luaL_Reg lua_exts[] = {
     { "zlib", luaopen_zlib},
     { "yaml", luaopen_yaml},
     { "pb", luaopen_pb},
+    { "bit", luaopen_bit},
+    { "struct", luaopen_struct},
     {NULL, NULL}
 };
 
