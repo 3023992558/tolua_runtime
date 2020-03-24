@@ -17,18 +17,22 @@ LOCAL_LDLIBS := -lm -lz
 LOCAL_SRC_FILES :=	../../tolua.c \
 					../../int64.c \
 					../../uint64.c \
-					../../pb.c \
+					../../pb/pb.c \
 					../../lpeg/lpcap.c \
 					../../lpeg/lpcode.c \
 					../../lpeg/lpprint.c \
 					../../lpeg/lptree.c \
 					../../lpeg/lpvm.c \
-					../../struct.c \
+					../../lua_zlib/lua_zlib.c \
 					../../cjson/strbuf.c \
 					../../cjson/lua_cjson.c \
 					../../cjson/fpconv.c \
-					../../lua_zlib/lua_zlib.c \
+					../../lpack/lpack.c \
 					../../lfs/lfs.c \
+					../../lyaml/emitter.c \
+					../../lyaml/parser.c \
+					../../lyaml/scanner.c \
+					../../lyaml/yaml.c \
 					../../yaml/api.c \
 					../../yaml/dumper.c \
 					../../yaml/emitter.c \
@@ -37,11 +41,7 @@ LOCAL_SRC_FILES :=	../../tolua.c \
 					../../yaml/reader.c \
 					../../yaml/scanner.c \
 					../../yaml/writer.c \
-					../../lyaml/emitter.c \
-					../../lyaml/parser.c \
-					../../lyaml/scanner.c \
-					../../lyaml/yaml.c \
-					../../lpack/lpack.c \
+					../../struct.c \
 					../../lua_extensions.c \
  					
 LOCAL_WHOLE_STATIC_LIBRARIES += liblua

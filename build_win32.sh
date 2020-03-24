@@ -55,7 +55,7 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	int64.c \
 	uint64.c \
 	tolua.c \
-	pb.c \
+	pb/pb.c \
 	lpeg/lpcap.c \
 	lpeg/lpcode.c \
 	lpeg/lpprint.c \
@@ -78,6 +78,7 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	lyaml/parser.c \
 	lyaml/scanner.c \
 	lyaml/yaml.c \
+	lua_extensions_jit.c \
 	-o $outpath/x86/tolua.dll \
 	-I./ \
  	-I$luapath/src \
@@ -87,6 +88,7 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	-Iyaml \
 	-Ilyaml \
 	-Ilpack \
+	-Ipb \
 	-lws2_32 \
  	-Wl,--whole-archive window/x86/$lualibname.a -Wl,--no-whole-archive -static-libgcc -static-libstdc++
 
