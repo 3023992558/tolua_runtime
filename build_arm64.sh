@@ -40,7 +40,7 @@ NDK=/Workspace/Android/android-ndk-r16b
 NDKABI=21
 NDKTRIPLE=aarch64-linux-android
 NDKVER=$NDK/toolchains/$NDKTRIPLE-4.9
-NDKP=$NDKVER/prebuilt/windows-x86_64/bin/$NDKTRIPLE-
+NDKP=$NDKVER/prebuilt/darwin-x86_64/bin/$NDKTRIPLE-
 NDKF="-isystem $NDK/sysroot/usr/include/$NDKTRIPLE -D__ANDROID_API__=$NDKABI -D_FILE_OFFSET_BITS=64"
 NDK_SYSROOT_BUILD=$NDK/sysroot
 NDK_SYSROOT_LINK=$NDK/platforms/android-$NDKABI/arch-arm64

@@ -62,6 +62,7 @@ gcc -m32 -O2 -std=gnu99 -shared \
 	lpeg/lptree.c \
 	lpeg/lpvm.c	\
 	struct.c \
+	lpack/lpack.c \
 	cjson/strbuf.c \
 	cjson/lua_cjson.c \
 	cjson/fpconv.c \
