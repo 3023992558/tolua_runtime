@@ -25,7 +25,7 @@ LOCAL_SRC_FILES :=	../../tolua.c \
 					../../lpeg/lpvm.c \
 					../../lua_zlib/lua_zlib.c \
 					../../cjson/strbuf.c \
-					../../cjson/lua_cjson.c \
+					../../cjson/lua_cjson_jit.c \
 					../../cjson/fpconv.c \
 					../../lpack/lpack.c \
 					../../lfs/lfs.c \

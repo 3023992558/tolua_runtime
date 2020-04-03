@@ -40,12 +40,9 @@
 #include <string.h>
 #include <math.h>
 #include <limits.h>
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
-
 #include "strbuf.h"
 #include "fpconv.h"
+#include "lua_cjson.h"
 
 #ifndef CJSON_MODNAME
 #define CJSON_MODNAME   "cjson"
@@ -82,7 +79,6 @@ typedef enum {
     T_ARR_END,
     T_STRING,
     T_NUMBER,
-    T_INT,
     T_BOOLEAN,
     T_NULL,
     T_COLON,
@@ -146,7 +142,6 @@ typedef struct {
         const char *string;
         double number;
         int boolean;
-        int integer;
     } value;
     int string_len;
 } json_token_t;
@@ -998,50 +993,13 @@ static void json_next_number_token(json_parse_t *json, json_token_t *token)
 {
     char *endptr;
 
-    double value = fpconv_strtod(json->ptr, &endptr);
+    token->type = T_NUMBER;
+    token->value.number = fpconv_strtod(json->ptr, &endptr);
     if (json->ptr == endptr)
-    {
-        token->type = T_NUMBER;
-        token->value.number = value;
         json_set_token_error(token, json, "invalid number");
-    }
     else
-    {
-        //scaning the str has dot-operation
-        char *start = (char*)json->ptr;
-        int is_int = 1;
-        while (start != endptr)
-        {
-            if (*start == '.')
-            {
-                //this is int
-                is_int = 0;
-                break;
-            }
-            ++start;
-        }
-        if (is_int == 1)
-        {
-            token->type = T_INT;
-            token->value.integer = (long long)value;
-        }
-        else
-        {
-            token->type = T_NUMBER;
-            token->value.number = value;
-        }
-        json->ptr = endptr;
-    }
-    
-    
-//    token->type = T_NUMBER;
-//    token->value.number = fpconv_strtod(json->ptr, &endptr);
-//    if (json->ptr == endptr)
-//        json_set_token_error(token, json, "invalid number");
-//    else
-//        json->ptr = endptr;     /* Skip the processed number */
-//    
-    
+        json->ptr = endptr;     /* Skip the processed number */
+
     return;
 }
 
@@ -1269,9 +1227,6 @@ static void json_process_value(lua_State *l, json_parse_t *json,
     case T_NUMBER:
         lua_pushnumber(l, token->value.number);
         break;;
-    case T_INT:
-        lua_pushinteger(l, token->value.integer);
-        break;
     case T_BOOLEAN:
         lua_pushboolean(l, token->value.boolean);
         break;;
@@ -1333,13 +1288,13 @@ static int json_decode(lua_State *l)
 
 /* ===== INITIALISATION ===== */
 
-#if !defined(LUA_JITLIBNAME) && LUA_VERSION_NUM == 501
-// #if 0
+#if !defined(LUA_VERSION_NUM) || LUA_VERSION_NUM < 502
+//#if 0
 /* Compatibility for Lua 5.1.
  *
  * luaL_setfuncs() is used to create a module table where the functions have
  * json_config_t as their first upvalue. Code borrowed from Lua 5.2 source. */
-static void luaL_setfuncs (lua_State *l, const luaL_Reg *reg, int nup)
+LUALIB_API void luaL_setfuncs (lua_State *l, const luaL_Reg *reg, int nup)
 {
     int i;
 
