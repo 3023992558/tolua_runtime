@@ -64,7 +64,7 @@ gcc -m64 -O2 -std=gnu99 -shared \
     struct.c \
     lpack/lpack.c \
     cjson/strbuf.c \
-    cjson/lua_cjson.c \
+    cjson/lua_cjson_jit.c \
     cjson/fpconv.c \
     lfs/lfs.c \
 	yaml/api.c \
